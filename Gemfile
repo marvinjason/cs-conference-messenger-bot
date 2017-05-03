@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'facebook-messenger'
+gem 'fuzzy_match'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
