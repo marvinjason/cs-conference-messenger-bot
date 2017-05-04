@@ -101,16 +101,10 @@ end
 Bot.on :postback do |postback|
 	case postback.payload
 	when 'venue'
-		puts '-' * 30
-		puts postback.inspect
-		puts '-' * 30
-		puts 'recipient[id]:'
-		puts postback.recipient['id']
-		puts '-' * 30
 		Bot.deliver(
 			{
 				recipient: {
-					id: postback.recipient['id']
+					id: postback.sender['id']
 				},
 				message: {
 					attachment: {
