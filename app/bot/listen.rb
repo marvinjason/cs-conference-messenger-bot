@@ -101,6 +101,9 @@ end
 Bot.on :postback do |postback|
 	case postback.payload
 	when 'venue'
+		puts '-' * 30
+		puts postback.recipient
+		puts '-' * 30
 		Bot.deliver(
 			{
 				recipient: {
