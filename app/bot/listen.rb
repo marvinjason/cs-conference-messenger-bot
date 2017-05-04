@@ -147,7 +147,7 @@ Bot.on :postback do |postback|
 					id: postback.sender['id']
 				},
 				message: {
-					text: %(FEU Tech's faculty of Computer Science holds an annual event wherein the third year students showcase their respective thesis project. This year, the event is entitled 'CS Con 2017'.)
+					text: %(FEU Tech's faculty of Computer Science holds an annual event wherein the third year students showcase their respective thesis project.)
 				}	
 			},
 			access_token: ENV['ACCESS_TOKEN']
