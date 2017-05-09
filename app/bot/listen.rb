@@ -2,9 +2,15 @@ include Facebook::Messenger
 
 Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["ACCESS_TOKEN"])
 
+Facebook::Messenger::Profile.set({
+  get_started: {
+    payload: 'GET_STARTED_PAYLOAD'
+  }
+}, access_token: ENV['ACCESS_TOKEN'])
+
 Bot.on :message do |message|
 
-	greetings = %w(hi hello hey ui um )
+	greetings = %w(hi hello hey ui um)
 	queries = %w(question tanong ask)
 	venue = %w(where saan venue)
 	time = %w(when kailan time date)
