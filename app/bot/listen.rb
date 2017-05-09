@@ -53,7 +53,7 @@ Bot.on :message do |message|
 		)
 	elsif time.include?(fuzzy_match)
 		message.reply(
-			text: 'The event starts at 1PM and ends at 6PM on June 2, 2017.'
+			text: 'The event starts at 1PM and ends at 6PM on June 6, 2017.'
 		)
 	elsif direction.include?(fuzzy_match)
 		message.reply(
@@ -135,7 +135,7 @@ Bot.on :postback do |postback|
 					id: postback.sender['id']
 				},
 				message: {
-					text: 'The event starts at 1PM and ends at 6PM on June 2, 2017.'
+					text: 'The event starts at 1PM and ends at 6PM on June 6, 2017.'
 				}	
 			},
 			access_token: ENV['ACCESS_TOKEN']
