@@ -1,4 +1,3 @@
-require 'facebook/messenger'
 include Facebook::Messenger
 
 Facebook::Messenger::Profile.set({
