@@ -8,7 +8,6 @@ Bot.on :message do |message|
 	queries = %w(question tanong ask)
 	venue = %w(where saan venue)
 	time = %w(when kailan time date)
-	direction = %w(how paano)
 	end_note = ['i see', 'ok', 'okie', 'haha', 'thanks', 'salamat', 'ohhh', ':)', ':3', '^_^', 'XD']
 
 	collection = greetings + venue + time + direction + end_note
@@ -54,24 +53,6 @@ Bot.on :message do |message|
 	elsif time.include?(fuzzy_match)
 		message.reply(
 			text: 'The event starts at 1PM and ends at 6PM on June 6, 2017.'
-		)
-	elsif direction.include?(fuzzy_match)
-		message.reply(
-			text: 'You mean, how to get there?'
-		)
-
-		message.reply(
-			text: '...how should I know :3'
-		)
-
-		message.reply(
-			text: 'I can give you a map though ^_^'#,
-			# attachment: {
-		 #    type: 'image',
-		 #    payload: {
-		 #      url: 'https://maps.google.com/maps?ll=14.604161,120.988607&z=16&t=m&hl=en-US&gl=PH&mapclient=embed&cid=12487658003456722574'
-		 #    }
-		 #  }
 		)
 	elsif end_note.include?(fuzzy_match)
 		message.reply(
