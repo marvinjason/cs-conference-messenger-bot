@@ -164,6 +164,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   facebook-messenger
   fuzzy_match
+  httparty
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
