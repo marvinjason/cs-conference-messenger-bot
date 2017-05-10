@@ -1,4 +1,4 @@
-# include Facebook::Messenger
+include Facebook::Messenger
 
 # Facebook::Messenger::Profile.set({
 #   get_started: {
@@ -6,7 +6,8 @@
 #   }
 # }, access_token: ENV['ACCESS_TOKEN'])
 
-Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["ACCESS_TOKEN"])
+# Facebook::Messenger::
+Subscriptions.subscribe(access_token: ENV["ACCESS_TOKEN"])
 
 Bot.on :message do |message|
 
