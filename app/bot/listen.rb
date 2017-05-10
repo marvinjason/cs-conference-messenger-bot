@@ -6,6 +6,57 @@ Facebook::Messenger::Profile.set({
   }
 }, access_token: ENV['ACCESS_TOKEN'])
 
+Facebook::Messenger::Profile.set({
+  greeting: [
+    {
+    	locale: 'default',
+    	text: %(Hey there! Welcome to CS Conference 2017. Ask me anything!)
+    }
+  ]
+}, access_token: ENV['ACCESS_TOKEN'])
+
+Facebook::Messenger::Profile.set({
+  persistent_menu: [
+    {
+      locale: 'default',
+      composer_input_disabled: true,
+      call_to_actions: [
+        {
+          title: 'My Account',
+          type: 'nested',
+          call_to_actions: [
+            {
+              title: %(What's a chatbot?),
+              type: 'postback',
+              payload: 'EXTERMINATE'
+            },
+            {
+              title: 'History',
+              type: 'postback',
+              payload: 'HISTORY_PAYLOAD'
+            },
+            {
+              title: 'Contact Info',
+              type: 'postback',
+              payload: 'CONTACT_INFO_PAYLOAD'
+            }
+          ]
+        },
+        {
+          type: 'web_url',
+          title: 'Get some help',
+          url: 'https://github.com/hyperoslo/facebook-messenger',
+          webview_height_ratio: 'full'
+        }
+      ]
+    },
+    {
+      locale: 'zh_CN',
+      composer_input_disabled: false
+    }
+  ]
+}, access_token: ENV['ACCESS_TOKEN'])
+
 Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["ACCESS_TOKEN"])
 
 Bot.on :postback do |postback|
