@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'facebook-messenger'
+gem 'facebook-messenger', github: 'hyperoslo/facebook-messenger'
 gem 'fuzzy_match'
 
 group :development, :test do

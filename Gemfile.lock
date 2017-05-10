@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/hyperoslo/facebook-messenger.git
+  revision: 5067e6cde1b173e100d954696a2c481d2ddfcd52
+  specs:
+    facebook-messenger (0.12.0)
+      httparty (~> 0.13, >= 0.13.7)
+      rack (>= 1.6.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -52,9 +60,6 @@ GEM
     concurrent-ruby (1.0.5)
     erubis (2.7.0)
     execjs (2.7.0)
-    facebook-messenger (0.11.1)
-      httparty (~> 0.13, >= 0.13.7)
-      rack (>= 1.6.4)
     ffi (1.9.18)
     fuzzy_match (2.1.0)
     globalid (0.4.0)
@@ -162,7 +167,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
-  facebook-messenger
+  facebook-messenger!
   fuzzy_match
   jbuilder (~> 2.5)
   jquery-rails
