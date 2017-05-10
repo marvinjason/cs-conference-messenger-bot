@@ -10,7 +10,7 @@ Facebook::Messenger::Profile.set({
   greeting: [
     {
     	locale: 'default',
-    	text: %(Welcome to CS Conference 2017. Ask me anything!)
+    	text: %({{user_first_name}}, welcome to CS Conference 2017!\nAsk me anything!)
     }
   ]
 }, access_token: ENV['ACCESS_TOKEN'])
@@ -45,8 +45,8 @@ Facebook::Messenger::Profile.set({
         {
           type: 'web_url',
           title: 'Visit site',
-          url: 'http://feutechcs.com/',
-          webview_height_ratio: 'full'
+          url: 'http://feutechcs.com/'
+          # webview_height_ratio: 'full'
         }
       ]
     }
