@@ -14,19 +14,19 @@ Bot.on :postback do |postback|
 		Bot.deliver(
 			{
 				recipient: {
-					id: postback.recipient['id']
+					id: postback.sender['id']
 				},
 				message: {
-					text: %Q(Hi #{recipient.sender}, thanks for your message. We are not here right now, but we'll get back to you soon!)
+					text: %Q(Hi #{postback.sender['name']}, thanks for your message. We are not here right now, but we'll get back to you soon!)
 				}
 			},
-			access_token: ENV['access_token']
+			access_token: ENV['ACCESS_TOKEN']
 		)
 
 		Bot.deliver(
 			{
 				recipient: {
-					id: postback.recipient['id']
+					id: postback.sender['id']
 				},
 				message: {
 					attachment: {
@@ -43,7 +43,7 @@ Bot.on :postback do |postback|
 					}
 				}	
 			}, 
-			access_token: ENV['access_token']
+			access_token: ENV['ACCESS_TOKEN']
 		)
 	when 'venue'
 		Bot.deliver(
