@@ -17,7 +17,7 @@ Bot.on :postback do |postback|
 					id: postback.sender['id']
 				},
 				message: {
-					text: %Q(Hi #{postback.sender['name']}, thanks for your message. We are not here right now, but we'll get back to you soon!)
+					text: %Q(Hi #{postback.sender}, thanks for your message. We are not here right now, but we'll get back to you soon!)
 				}
 			},
 			access_token: ENV['ACCESS_TOKEN']
