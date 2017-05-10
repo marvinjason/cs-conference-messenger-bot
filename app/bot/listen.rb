@@ -22,30 +22,30 @@ Facebook::Messenger::Profile.set({
       composer_input_disabled: true,
       call_to_actions: [
         {
-          title: 'My Account',
+          title: 'Options',
           type: 'nested',
           call_to_actions: [
             {
-              title: %(What's a chatbot?),
+              title: 'Venue',
               type: 'postback',
-              payload: 'EXTERMINATE'
+              payload: 'venue'
             },
             {
-              title: 'History',
+              title: 'Date & Time',
               type: 'postback',
-              payload: 'HISTORY_PAYLOAD'
+              payload: 'datetime'
             },
             {
-              title: 'Contact Info',
+              title: 'About',
               type: 'postback',
-              payload: 'CONTACT_INFO_PAYLOAD'
+              payload: 'about'
             }
           ]
         },
         {
           type: 'web_url',
-          title: 'Get some help',
-          url: 'https://github.com/hyperoslo/facebook-messenger',
+          title: 'Visit site',
+          url: 'http://feutechcs.com/',
           webview_height_ratio: 'full'
         }
       ]
