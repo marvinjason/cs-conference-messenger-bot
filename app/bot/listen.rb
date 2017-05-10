@@ -10,7 +10,7 @@ Facebook::Messenger::Profile.set({
   greeting: [
     {
     	locale: 'default',
-    	text: %(Hey there! Welcome to CS Conference 2017. Ask me anything!)
+    	text: %(Welcome to CS Conference 2017. Ask me anything!)
     }
   ]
 }, access_token: ENV['ACCESS_TOKEN'])
@@ -49,10 +49,6 @@ Facebook::Messenger::Profile.set({
           webview_height_ratio: 'full'
         }
       ]
-    },
-    {
-      locale: 'zh_CN',
-      composer_input_disabled: false
     }
   ]
 }, access_token: ENV['ACCESS_TOKEN'])
@@ -68,7 +64,7 @@ Bot.on :postback do |postback|
 					id: postback.sender['id']
 				},
 				message: {
-					text: %Q(Hi #{postback.sender}, thanks for your message. We are not here right now, but we'll get back to you soon!)
+					text: %Q(Hey, thanks for your message! We are not here right now, but we'll get back to you soon!)
 				}
 			},
 			access_token: ENV['ACCESS_TOKEN']
