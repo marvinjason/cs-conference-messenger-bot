@@ -133,7 +133,7 @@ Bot.on :postback do |postback|
 					id: postback.sender['id']
 				},
 				message: {
-					text: 'The event starts at 1PM and ends at 6PM on June 10, 2017.'
+					text: 'There has been a change in schedule, so the event now starts at 1PM and ends at 6PM on June 10, 2017.'
 				}	
 			},
 			access_token: ENV['ACCESS_TOKEN']
