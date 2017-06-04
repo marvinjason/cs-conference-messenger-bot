@@ -36,6 +36,11 @@ Facebook::Messenger::Profile.set({
               payload: 'datetime'
             },
             {
+              title: 'Registration',
+              type: 'postback',
+              payload: 'register'
+            },
+            {
               title: 'About',
               type: 'postback',
               payload: 'about'
@@ -84,6 +89,7 @@ Bot.on :postback do |postback|
 							buttons: [
 								{ type: 'postback', title: 'Venue', payload: 'venue' },
 								{ type: 'postback', title: 'Date & Time', payload: 'datetime' },
+								{ type: 'postback', title: 'Registration', payload: 'register' },
 								{ type: 'postback', title: 'CS Conference 2017', payload: 'about' }
 							]
 						}
@@ -127,7 +133,19 @@ Bot.on :postback do |postback|
 					id: postback.sender['id']
 				},
 				message: {
-					text: 'The event starts at 1PM and ends at 6PM on June 6, 2017.'
+					text: 'The event starts at 1PM and ends at 6PM on June 10, 2017.'
+				}	
+			},
+			access_token: ENV['ACCESS_TOKEN']
+		)
+	when 'register'
+		Bot.deliver(
+			{
+				recipient: {
+					id: postback.sender['id']
+				},
+				message: {
+					text: 'Registration has ended for now, but we might open it up again sometime soon, so stay tuned!'
 				}	
 			},
 			access_token: ENV['ACCESS_TOKEN']
