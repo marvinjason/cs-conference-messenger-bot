@@ -1,4 +1,4 @@
-## CS Conference Messenger Bot
+# CS Conference Messenger Bot
 
 Facebook Messenger bot deployed for [FEUTECH](http://www.feutech.edu.ph/)'s [CS CON 2K17](http://feutechcs.com/) event. The bot was used to disseminate simple event details and handle traffic.
 
