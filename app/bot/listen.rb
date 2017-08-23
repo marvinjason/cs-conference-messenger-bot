@@ -63,17 +63,17 @@ Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["ACCESS_TOKEN"])
 Bot.on :postback do |postback|
 	case postback.payload
 	when 'GET_STARTED_PAYLOAD'
-		Bot.deliver(
-			{
-				recipient: {
-					id: postback.sender['id']
-				},
-				message: {
-					text: %Q(Hey, thanks for your message! We are not here right now, but we'll get back to you soon!)
-				}
-			},
-			access_token: ENV['ACCESS_TOKEN']
-		)
+		# Bot.deliver(
+		# 	{
+		# 		recipient: {
+		# 			id: postback.sender['id']
+		# 		},
+		# 		message: {
+		# 			text: %Q(Hey, thanks for your message! We are not here right now, but we'll get back to you soon!)
+		# 		}
+		# 	},
+		# 	access_token: ENV['ACCESS_TOKEN']
+		# )
 
 		Bot.deliver(
 			{
