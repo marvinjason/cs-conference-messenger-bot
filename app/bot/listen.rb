@@ -75,29 +75,28 @@ Bot.on :postback do |postback|
 			access_token: ENV['ACCESS_TOKEN']
 		)
 
-		# Bot.deliver(
-		# 	{
-		# 		recipient: {
-		# 			id: postback.sender['id']
-		# 		},
-		# 		message: {
-		# 			attachment: {
-		# 				type: 'template',
-		# 				payload: {
-		# 					template_type: 'button',
-		# 					text: %(In the meantime, you might want to check these out:),
-		# 					buttons: [
-		# 						{ type: 'postback', title: 'Venue', payload: 'venue' },
-		# 						{ type: 'postback', title: 'Date & Time', payload: 'datetime' },
-		# 						{ type: 'postback', title: 'Registration', payload: 'register' },
-		# 						{ type: 'postback', title: 'CS Conference 2017', payload: 'about' }
-		# 					]
-		# 				}
-		# 			}
-		# 		}
-		# 	}, 
-		# 	access_token: ENV['ACCESS_TOKEN']
-		# )
+		Bot.deliver(
+			{
+				recipient: {
+					id: postback.sender['id']
+				},
+				message: {
+					attachment: {
+						type: 'template',
+						payload: {
+							template_type: 'button',
+							text: %(In the meantime, you might want to check these out:),
+							buttons: [
+								{ type: 'postback', title: 'Venue', payload: 'venue' },
+								{ type: 'postback', title: 'Date & Time', payload: 'datetime' },
+								{ type: 'postback', title: 'Registration', payload: 'register' }
+							]
+						}
+					}
+				}
+			}, 
+			access_token: ENV['ACCESS_TOKEN']
+		)
 	when 'venue'
 		Bot.deliver(
 			{
