@@ -1,24 +1,13 @@
-# README
+## CS Conference Messenger Bot
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Facebook Messenger bot deployed for [FEUTECH](http://www.feutech.edu.ph/)'s [CS CON 2K17](http://feutechcs.com/) event. The bot was used to disseminate simple event details and handle traffic.
 
-Things you may want to cover:
+## Screenshots
 
-* Ruby version
+<img src="images/01.png" width="250" alt="Image 1"> <img src="images/02.png" width="250" alt="Image 2">
 
-* System dependencies
+<img src="images/03.png" width="250" alt="Image 3"> <img src="images/04.png" width="250" alt="Image 4">
 
-* Configuration
+## Demo
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The bot is hosted live at the [event page](https://www.facebook.com/csfeutech/).
